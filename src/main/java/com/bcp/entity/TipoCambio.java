@@ -15,9 +15,9 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class TipoCambio {
     @Id
-    @Column(name = "id")
-    private String id;
+    @Column(name = "moneda")
+    private String moneda;
 
-    @Column(name = "title")
-    private String title;
+    @Column(name = "conversion")
+    private String conversion;
 }

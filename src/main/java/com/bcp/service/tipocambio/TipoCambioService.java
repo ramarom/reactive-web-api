@@ -8,6 +8,6 @@ import io.reactivex.Single;
 
 public interface TipoCambioService {
     
-	Single<List<TipoCambioResponse>> getTipoCambio(TipoCambioRequest req);
+	Single<TipoCambioResponse> getTipoCambio(TipoCambioRequest req);
 	
 }

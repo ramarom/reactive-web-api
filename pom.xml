@@ -8,7 +8,7 @@
         <version>2.1.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.axell</groupId>
+    <groupId>com.bcp</groupId>
     <artifactId>reactive</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>reactive</name>
