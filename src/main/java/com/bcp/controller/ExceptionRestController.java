@@ -13,7 +13,8 @@ import javax.persistence.EntityNotFoundException;
 @RestControllerAdvice
 public class ExceptionRestController {
     @ExceptionHandler(EntityNotFoundException.class)
-    public ResponseEntity<BaseWebResponse> handleEntityNotFoundException() {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(BaseWebResponse.error(ErrorCode.ENTITY_NOT_FOUND));
+    public ResponseEntity<BaseWebResponse> handleEntityNotFoundException(String message) {
+        //return ResponseEntity.status(HttpStatus.NOT_FOUND).body(BaseWebResponse.error(ErrorCode.ENTITY_NOT_FOUND));
+    	return ResponseEntity.status(HttpStatus.NOT_FOUND).body(BaseWebResponse.error(ErrorCode.MONEDA_NO_ENCONTRADA));
     }
 }

@@ -19,5 +19,5 @@ public class TipoCambio {
     private String moneda;
 
     @Column(name = "conversion")
-    private String conversion;
+    private Double conversion;
 }

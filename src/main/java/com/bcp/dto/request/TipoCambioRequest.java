@@ -13,4 +13,6 @@ public class TipoCambioRequest {
     private Double monto;
     private String monedaOrigen;
     private String monedaDestino;
+    private String moneda;
+    private Double tipoCambio;
 }
