@@ -26,7 +26,7 @@ public class TipoCambioRestController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public Single<ResponseEntity<BaseWebResponse<TipoCambioResponse>>> getBookDetail(@RequestBody TipoCambioRequest tipoCambioRequest) {
+    public Single<ResponseEntity<BaseWebResponse<TipoCambioResponse>>> getTipoCambio(@RequestBody TipoCambioRequest tipoCambioRequest) {
         return tipoCambioService.getTipoCambio(tipoCambioRequest)
                 .subscribeOn(Schedulers.io())
                 .map(tipoCambioResponse -> ResponseEntity.ok(BaseWebResponse.successWithData(toTipoCambioResponse(tipoCambioResponse))));
@@ -53,7 +53,7 @@ public class TipoCambioRestController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public Single<ResponseEntity<BaseWebResponse>> addBook(@RequestBody TipoCambioRequest addTipoCambioRequest) {
+    public Single<ResponseEntity<BaseWebResponse>> addTipoCambio(@RequestBody TipoCambioRequest addTipoCambioRequest) {
     	System.out.println("Entrando a creación de Tipo de Cambio");
         return tipoCambioService.addTipoCambio(addTipoCambioRequest)
                 .subscribeOn(Schedulers.io())
